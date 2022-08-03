@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Student Companion Application</title>
+</head>
+
+<body>
+    <!-- <div class="header">
+        <h1>Student Companion Application</h1>
+        <p>Resize the browser window to see the effect.</p>
+    </div> -->
+
+    <!-- Navigation Bar -->
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active_nav">Home</a></li>
+                <li><a href="./mainApp/todo/todo.html">To-do List</a></li>
+                <li><a href="./mainApp/notes/notes.html">Notes</a></li>
+                <li><a href="https://amity.refread.com/#/home" target="_blank" rel="noopener">eLibrary</a></li>
+                <li id="right-nav"><i class="material-icons" style="font-size: 40px;">account_circle</i></li>
+                <li id="right-nav"><a href="./mainApp/about/about.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- header
+    <div class="banner">
+        <div class="banner__contents">
+            <h1 class="banner__title">MONEY HEIST</h1>
+            <div class="banner__buttons">
+                <button class="banner__button">Play</button>
+                <button class="banner__button">More info.</button>
+            </div>
+            <div class="banner__discription"> To carry out the biggest heist in history, a mysterious man called The Proffessor recruits a band of eight robbers who have single chrarateristic n...
+            </div>
+        </div>
+        <div class="banner--fadeBottom"></div> -->
+    <!-- Page Content -->
+    <div class="nav__spacer"></div>
+    <div class="sec_head">Attendence</div>
+    <div class="wrapper">
+        <div class="card">
+            <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+            </div>
+            <div class="text_num">17/20</div>
+            <div class="text">Subject 1</div>
+        </div>
+        <div class="card s2">
+            <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+            </div>
+            <div class="text_num">14/20</div>
+            <div class="text">Subject 2</div>
+        </div>
+        <div class="card s3">
+            <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+            </div>
+            <div class="text_num">12/20</div>
+            <div class="text">Subject 3</div>
+        </div>
+        <div class="card s4">
+            <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+            </div>
+            <div class="text_num">00/00</div>
+            <div class="text">Subject 4</div>
+        </div>
+        <div class="card s5">
+            <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+            </div>
+            <div class="text_num">00/00</div>
+            <div class="text">Subject 5</div>
+        </div>
+        <div class="card s6">
+            <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+            </div>
+            <div class="text_num">00/00</div>
+            <div class="text">Subject 6</div>
+        </div>
+    </div>
+
+
+    <div class="sec_head">Miscellaneous</div>
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////// -->
+    <script>
+        let options = {
+            startAngle: -1.55,
+            size: 150,
+            value: 0.85,
+            fill: { gradient: ['#a445b2', '#fa4299'] }
+        }
+        $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+            function (event, progress, stepValue) {
+                $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+            });
+        $(".s2 .bar").circleProgress({
+            value: 0.70
+        });
+        $(".s3 .bar").circleProgress({
+            value: 0.60
+        });
+        $(".s4 .bar").circleProgress({
+            value: 0.65
+        });
+        $(".s5 .bar").circleProgress({
+            value: 0.90
+        });
+        $(".s6 .bar").circleProgress({
+            value: 0.80
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/126f1bd1b6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

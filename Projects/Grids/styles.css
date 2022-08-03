@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: darkslategrey;
+}
+
+
+.grid {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid div{
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+    
+}
+
+.grid div:nth-child(2n){
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.grid div:nth-child(2n+1){
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
